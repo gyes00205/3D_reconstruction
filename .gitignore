@@ -1,0 +1,15 @@
+dataset1/
+lab_dataset/
+lab_dataset_standard/
+lab_dataset2/
+lab_pose_dataset1_depth_view/
+ogl_viewer/
+tutorial/
+depth_sensing.py
+position_tracking.py
+*.svo
+*.obj
+*.ply
+test.py
+reconstruct.py
+svo_export.py
