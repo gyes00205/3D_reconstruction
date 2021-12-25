@@ -13,3 +13,4 @@ position_tracking.py
 test.py
 reconstruct.py
 svo_export.py
+3d_reconstruction.py
