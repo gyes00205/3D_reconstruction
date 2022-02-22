@@ -1,6 +1,6 @@
 """
 Usage: 
-python zed_reconstruct.py --scene=lab_dataset/ --mode=1
+python zed_reconstruct.py --scene=lab_pose_dataset1/ --mode=1
 """
 import numpy as np
 import cv2
@@ -252,7 +252,7 @@ if __name__ == '__main__':
     
     if args.mode == 0:
         pose_data_list = np.load(os.path.join(args.scene, 'pose_data.npy'))
-        pose_data_list[:,[0,1,2],3] /= 100000.0
+        pose_data_list[:,[0,1,2],3] /= 1000000.0
         for i in range(len(pose_data_list)):
             pcd_list[i] = pcd_list[i].transform(pose_data_list[i])
             print(pose_data_list[i])
@@ -289,7 +289,7 @@ if __name__ == '__main__':
     
     elif args.mode == 2:
         pose_data_list = np.load(os.path.join(args.scene, 'pose_data.npy'))
-        pose_data_list[:,[0,1,2],3] /= 100000.0
+        pose_data_list[:,[0,1,2],3] /= 1000000.0
         for i in range(len(pose_data_list)):
             pcd_list[i] = pcd_list[i].transform(pose_data_list[i])
         
